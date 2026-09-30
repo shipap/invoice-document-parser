@@ -1,0 +1,27 @@
+{
+  "invoice_number": "NG-2026-1042",
+  "invoice_date": "2026-09-01",
+  "due_date": "2026-09-30",
+  "vendor": "Cedar Workshop (fictional)",
+  "customer": "Harbor Studio (fictional)",
+  "currency": "USD",
+  "subtotal": "500.00",
+  "tax": "50.00",
+  "total": "550.00",
+  "line_items": [
+    {
+      "description": "Design consultation",
+      "quantity": "2",
+      "unit_price": "150.00",
+      "tax": "30.00",
+      "total": "330.00"
+    },
+    {
+      "description": "Template setup",
+      "quantity": "1",
+      "unit_price": "200.00",
+      "tax": "20.00",
+      "total": "220.00"
+    }
+  ]
+}

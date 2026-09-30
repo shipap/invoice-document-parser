@@ -1,0 +1,12 @@
+Invoice number: NG-2026-1042
+Invoice date: 2026-09-01
+Due date: 2026-09-30
+Vendor: Cedar Workshop (fictional)
+Customer: Harbor Studio (fictional)
+Currency: USD
+Description | Quantity | Unit price | Tax | Total
+Design consultation | 2 | 150.00 | 30.00 | 330.00
+Template setup | 1 | 200.00 | 20.00 | 220.00
+Subtotal: 500.00
+Tax: 50.00
+Total: 550.00

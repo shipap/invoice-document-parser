@@ -1,0 +1,25 @@
+services:
+  parser:
+    build: .
+    ports:
+      - "127.0.0.1:8001:8000"
+    environment:
+      PROVIDER: ${PROVIDER:-demo}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      API_TOKEN: ${API_TOKEN:-}
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-8}
+      MAX_PDF_PAGES: ${MAX_PDF_PAGES:-30}
+      MAX_TEXT_CHARS: ${MAX_TEXT_CHARS:-60000}
+      EXTRACTION_TIMEOUT_SECONDS: ${EXTRACTION_TIMEOUT_SECONDS:-20}
+      REQUESTS_PER_MINUTE: ${REQUESTS_PER_MINUTE:-20}
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 1.0

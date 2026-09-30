@@ -1,0 +1,56 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 535 >>
+stream
+BT /F1 11 Tf 50 770 Td
+(Invoice number: NG-2026-1042) Tj
+0 -20 Td
+(Invoice date: 2026-09-01) Tj
+0 -20 Td
+(Due date: 2026-09-30) Tj
+0 -20 Td
+(Vendor: Cedar Workshop \(fictional\)) Tj
+0 -20 Td
+(Customer: Harbor Studio \(fictional\)) Tj
+0 -20 Td
+(Currency: USD) Tj
+0 -20 Td
+(Description | Quantity | Unit price | Tax | Total) Tj
+0 -20 Td
+(Design consultation | 2 | 150.00 | 30.00 | 330.00) Tj
+0 -20 Td
+(Template setup | 1 | 200.00 | 20.00 | 220.00) Tj
+0 -20 Td
+(Subtotal: 500.00) Tj
+0 -20 Td
+(Tax: 50.00) Tj
+0 -20 Td
+(Total: 550.00) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+897
+%%EOF

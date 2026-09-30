@@ -1,0 +1,31 @@
+name: Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest
+      - run: docker compose config --quiet
+      - run: docker build -t invoice-parser:test .
+      - name: Container smoke test
+        run: |
+          docker run -d --name invoice-parser -p 127.0.0.1:8000:8000 invoice-parser:test
+          for attempt in $(seq 1 30); do
+            if curl --fail http://127.0.0.1:8000/health; then break; fi
+            sleep 1
+          done
+          curl --fail http://127.0.0.1:8000/health
+          curl --fail -F file=@examples/sample-invoice.pdf http://127.0.0.1:8000/api/extract
+          docker stop invoice-parser
